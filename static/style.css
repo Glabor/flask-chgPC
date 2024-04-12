@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(233, 225, 216);
+}
+
+button {
+  display: inline-block;
+  background-color: rgb(53, 146, 233);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 3px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 2px;
+  cursor: pointer;
+  width: 120px;
+}
+
+[data-status="true"] {
+  background-color: black;
+  color: white;
+}
+
+[data-status="false"] {
+  background-color: white;
+  color: black;
+}

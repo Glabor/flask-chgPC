@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask app</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+    <script src="/static/script.js"></script>
+  </head>
+
+  <body>
+    HELLO FLASK
+    <p>
+      WiFi status : <span style="display: inline" id="wifiState">unknown</span>
+    </p>
+    <p><button id="wifiButton" onclick="testMess()">test</button></p>
+
+    <p id="ctrlField">
+      Live control : <a href="#" id="ctrlBtn"><button>control</button></a>
+    </p>
+    <div>
+      last message :
+      <p id="liveField"></p>
+    </div>
+  </body>
+</html>
