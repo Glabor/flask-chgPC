@@ -18,6 +18,7 @@ def index():
 	return render_template('index.html')
 
 
+
 # global wifiOn, espIP
 wifiOn=False
 espIP=""
