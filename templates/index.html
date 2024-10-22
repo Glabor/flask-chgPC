@@ -3,25 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flask app</title>
+    <title>Flask Control</title>
     <link rel="stylesheet" href="/static/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script> -->
+
+    <script src="/static/socket.io.js"></script>
     <script src="/static/script.js"></script>
   </head>
 
   <body>
-    HELLO FLASK
+    <h1>Activate WiFi to control target</h1>
     <p>
-      WiFi status : <span style="display: inline" id="wifiState">unknown</span>
+      <b>Syst. # : </b
+      ><span id="systID"
+        >no system selected, please select one to control it</span
+      >
     </p>
-    <p><button id="wifiButton" onclick="testMess()">test</button></p>
+    <p>
+      <b>WiFi status :</b>
+      <span style="display: inline" id="wifiState">unknown</span>
+      <button id="wifiButton" onclick="toggleWifi()"></button>
+    </p>
 
     <p id="ctrlField">
-      Live control : <a href="#" id="ctrlBtn"><button>control</button></a>
+      <b>Live control : </b
+      ><a href="#" id="ctrlBtn"><button>control</button></a>
     </p>
     <div>
-      last message :
-      <p id="liveField"></p>
+      <b>Last message received :</b>
+      <span id="liveField"></span> s ago
+    </div>
+    <div>
+      <h2>List of systems</h2>
+      <ul id="sysList"></ul>
     </div>
   </body>
 </html>
